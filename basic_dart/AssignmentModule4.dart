@@ -1,11 +1,13 @@
 abstract class Account{
+
   int accountNumber;
   double balance;
+
   Account(this.accountNumber, this.balance);
 
   void deposit(double amount) {
     balance += amount;
-    print("Deposited: $amount, New balance: $balance");
+    print("Deposited: \$$amount , New balance: \$$balance");
   }
 
   void withdraw (double amount);
@@ -23,7 +25,7 @@ class SavingsAccount extends Account{
     if(amount<=balance){
       balance-=amount;
       balance+=balance*interestRate;
-      print("Withdrawn: $amount, New Balance $balance");
+      print("Withdrawn: \$$amount , New Balance \$$balance");
     }
     else {
       print("Insufficient balance");
@@ -40,7 +42,7 @@ class CurrentAccount extends Account{
 
     if(amount-overdraftLimit<=balance){
       balance-=amount;
-      print("Withdrawn: $amount , New balance: $balance");
+      print("Withdrawn: \$$amount , New balance: \$$balance");
     }
     else{
       print("Insufficient balance");
