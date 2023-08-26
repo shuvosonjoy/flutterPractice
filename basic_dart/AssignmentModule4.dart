@@ -28,7 +28,7 @@ class SavingsAccount extends Account{
       print("Withdrawn: \$$amount , Updated balance: \$$balance");
     }
     else {
-      print("Insufficient balance");
+      print("Insufficient funds");
     }
 
   }
@@ -45,7 +45,7 @@ class CurrentAccount extends Account{
       print("Withdrawn: \$$amount , Updated balance: \$$balance");
     }
     else{
-      print("Insufficient balance");
+      print("Insufficient funds");
     }
 
   }
