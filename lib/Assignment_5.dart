@@ -44,15 +44,15 @@ class HomeScreen extends StatelessWidget{
       ),
       body:
 
- Column(
-  children: [
-    Text("hello world",style: TextStyle(
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
-      color: Colors.amber,
-    ),),Text("Homepage"),
-    Icon(Icons.access_time_filled),
-  ],
+      Column(
+        children: [
+          Text("hello world",style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.amber,
+          ),),Text("Homepage"),
+          Icon(Icons.access_time_filled),
+        ],
 
 
       ),
