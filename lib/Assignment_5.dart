@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget{
             fontSize: 25,
             fontWeight: FontWeight.bold,
             color: Colors.amber,
-          ),),Text("Homepage"),
+          ),),Text("Homepages"),
           Icon(Icons.access_time_filled),
         ],
 
