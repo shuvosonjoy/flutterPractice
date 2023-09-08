@@ -18,7 +18,6 @@ class myApp extends StatelessWidget {
 
 
 class HomeScreen extends StatelessWidget {
-
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -27,20 +26,14 @@ class HomeScreen extends StatelessWidget {
         elevation: 70,
         backgroundColor: Colors.green,
         centerTitle: true,
-        leading: Icon(Icons.add_card_sharp),
+        leading: Icon(Icons.add_business_sharp),
         actions: [
           Row(
             children: [
-
-                Icon(Icons.search),
-
-
-
+              Icon(Icons.search),
             ],
           ),
         ],
-
-
         title: Text(
           "Home",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
@@ -49,32 +42,46 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               "This is mod 5 Assignment",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: Colors.black),
             ),
-            SizedBox(height: 5,),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "My ",
+                  "My",
                   style: TextStyle(color: Colors.red, fontSize: 25),
                 ),
-                Text(
-                  "phone ",
-                  style: TextStyle(color: Colors.blue, fontSize: 15),
+                SizedBox(
+                  width: 5,
                 ),
                 Text(
-                  "name ",
+                  "phone",
+                  style: TextStyle(color: Colors.blue, fontSize: 15),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  "name",
                   style: TextStyle(
                     color: Colors.deepPurple,
                     fontSize: 20,
                   ),
                 ),
+                SizedBox(
+                  width: 5,
+                ),
                 Text(
-                  "Your phone name ",
+                  "Your phone name",
                   style: TextStyle(color: Colors.amber, fontSize: 25),
                 )
               ],
