@@ -5,7 +5,6 @@ void main() {
   runApp(myApp());
 }
 
-
 class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +14,6 @@ class myApp extends StatelessWidget {
     );
   }
 }
-
 
 class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -28,10 +26,9 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         leading: Icon(Icons.add_business_sharp),
         actions: [
-          Row(
-            children: [
-              Icon(Icons.search),
-            ],
+          Container(
+            margin: (EdgeInsets.only(right: 20)),
+            child: Icon(Icons.search),
           ),
         ],
         title: Text(
