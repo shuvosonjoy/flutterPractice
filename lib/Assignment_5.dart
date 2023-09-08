@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                 Text(
                   "name",
                   style: TextStyle(
-                    color: Colors.deepPurple,
+                    color: Colors.purpleAccent,
                     fontSize: 20,
                   ),
                 ),
