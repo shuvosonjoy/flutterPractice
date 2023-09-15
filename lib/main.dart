@@ -27,11 +27,11 @@ class HomeScreen extends StatelessWidget {
         children: [
           Container(
             width: 200,
-           // height: 100,
+            // height: 100,
 
             margin: EdgeInsets.all(10),
-              padding: EdgeInsets.only(top: 10, bottom: 10, left: 4),
-           // padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: EdgeInsets.only(top: 10, bottom: 10, left: 4),
+            // padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.amber,
               border: Border.all(color: Colors.black, width: 2),
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              Container(
+              /*  Container(
                 padding: EdgeInsets.symmetric(vertical: 4, horizontal: 5),
                 decoration: BoxDecoration(
                     color: Colors.black,
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 margin: EdgeInsets.only(left: 20, top: 20),
-              ),
+              ),*/
               SizedBox(
                 width: 20,
               ),
@@ -126,6 +126,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           )),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+backgroundColor: Colors.red,
+textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)
+            ),
+              onPressed: () {},
+              child: Text("button"),
+            ),
+          ),
         ],
       ),
     );
