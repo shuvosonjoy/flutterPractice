@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         title: Text("Appbar"),
       ),
       body: Scrollbar(
-        child: GridView.builder(
+        /*child: GridView.builder(
           itemCount: 10, ///how much item needed
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -38,6 +38,16 @@ class HomeScreen extends StatelessWidget {
             );
           },
         ),
+        */
+        child: ListView.builder(
+            itemCount: 20,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text("list tile index: ${index + 1}"),
+                subtitle: Text("subtitle....."),
+                leading: Icon(Icons.account_balance),
+              );
+            }),
       ),
     );
   }
