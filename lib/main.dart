@@ -13,34 +13,36 @@ class myApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  List<String> students = [
+    'shuvo',
+    'sonjoy',
+    'shuvo_sonjoy',
+    'Sonjoy Sutradhar Shuvo'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Appbar"),
-      ),
       body: Scrollbar(
-
         child: ListView.separated(
-            itemCount: 20,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text("list tile index: ${index + 1}"),
-                subtitle: Text("subtitle....."),
-                leading: Icon(Icons.account_balance),
-              );
-            },
-            separatorBuilder: (context, index) {
-              return Column(
-                children: [
-                  Text(index.toString()),
-                  Divider(),
-                ],
-              );
-            }),
+          itemCount: students.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(students[index]),
+            );
+          },
+          separatorBuilder: (context, index) {
+            return Divider();
+          },
+        ),
       ),
     );
   }
