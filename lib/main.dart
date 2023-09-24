@@ -25,36 +25,19 @@ class CounterScreen extends StatefulWidget {
 class _CounterState extends State<CounterScreen> {
   int counter = 0;
 
-  void _showAlertDialog() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Button Pressed $counter times'),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Close'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter App'),
+        title: Text('Counter App',style: TextStyle(fontSize: 20),),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(" Count : ",style: TextStyle(fontSize: 25),),
+            Text(" Count:",style: TextStyle(fontSize: 25),),
             Text(
               counter.toString(),
               style: TextStyle(
@@ -71,7 +54,7 @@ class _CounterState extends State<CounterScreen> {
                     setState(() {
                       counter = counter + 1;
                       if (counter >= 5) {
-                        _showAlertDialog();
+                        _Alert();
                       }
                     });
                   },
@@ -95,4 +78,24 @@ class _CounterState extends State<CounterScreen> {
       ),
     );
   }
+
+  void _Alert() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Button Pressed $counter times'),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }
