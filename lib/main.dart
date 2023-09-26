@@ -36,7 +36,9 @@ class _ProductListState extends State<ProductList> {
   void _addToCart(int index) {
     setState(() {
       products[index].CartQuantity++;
-      if (!cartCategories.contains(products[index].ProductName)) {
+
+
+       if (!cartCategories.contains(products[index].ProductName)) {
         cartCategories.add(products[index].ProductName);
       }
       if (products[index].CartQuantity == 5) {
@@ -93,7 +95,6 @@ class _ProductListState extends State<ProductList> {
             subtitle: Text(
                 'Price: \$${products[index].ProductPrice.toStringAsFixed(2)}'),
             trailing: Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Text('Counters: ${products[index].CartQuantity}'),
                 ElevatedButton(
@@ -123,7 +124,9 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Cart')),
+        title: Center(
+
+            child:Text('Cart   ')),
       ),
       body: Center(
         child: Text('Total Products: ${cartCategories.length}'),
