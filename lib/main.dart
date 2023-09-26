@@ -53,7 +53,7 @@ class _ProductListState extends State<ProductList> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(
-            'Congratulations!',
+            'Congratulations! ',
 
           ),
           content: Text('You\'ve bought 5 ${product.ProductName}!'),
