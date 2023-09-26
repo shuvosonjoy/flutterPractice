@@ -95,6 +95,7 @@ class _ProductListState extends State<ProductList> {
             subtitle: Text(
                 'Price: \$${products[index].ProductPrice.toStringAsFixed(2)}'),
             trailing: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text('Counters: ${products[index].CartQuantity}'),
                 ElevatedButton(
