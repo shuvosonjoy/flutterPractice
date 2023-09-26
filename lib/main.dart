@@ -54,7 +54,7 @@ class _ProductListState extends State<ProductList> {
         return AlertDialog(
           title: Text(
             'Congratulations!',
-            style: TextStyle(fontWeight: FontWeight.bold),
+
           ),
           content: Text('You\'ve bought 5 ${product.ProductName}!'),
           actions: [
