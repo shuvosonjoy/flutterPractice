@@ -28,7 +28,15 @@ class _ProductListState extends State<ProductList> {
     Product('Product 2', 20.0),
     Product('Product 3', 30.0),
     Product('Product 4', 10.0),
-    Product('Product 5', 50.0),
+    Product('Product 5', 500.0),
+    Product('Product 6', 40.0),
+    Product('Product 7', 90.0),
+    Product('Product 8', 80.0),
+    Product('Product 9', 10.0),
+    Product('Product 10', 20.0),
+    Product('Product 11', 30.0),
+    Product('Product 12', 10.0),
+    Product('Product 13', 70.0),
   ];
 
   List<String> cartCategories = [];
@@ -38,10 +46,10 @@ class _ProductListState extends State<ProductList> {
       products[index].CartQuantity++;
 
 
-       if (!cartCategories.contains(products[index].ProductName)) {
+      if (!cartCategories.contains(products[index].ProductName)) {
         cartCategories.add(products[index].ProductName);
       }
-      if (products[index].CartQuantity == 5) {
+      if (products[index].CartQuantity >= 5) {
         _CongratulationsDialog(products[index]);
       }
     });
@@ -127,7 +135,7 @@ class CartPage extends StatelessWidget {
       appBar: AppBar(
         title: Center(
 
-            child:Text('Cart   ')),
+            child: Text('Cart   ')),
       ),
       body: Center(
         child: Text('Total Products: ${cartCategories.length}'),
