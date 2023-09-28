@@ -156,7 +156,7 @@ class HomePage extends StatelessWidget {
                     //  child: Image.network('https://images.pexels.com/photos/1203803/pexels-photo-1203803.jpeg?auto=compress&cs=tinysrgb&w=600'),
                   ),
                   SizedBox(
-                    width: 300,
+                    width: 550,
                     child: Container(
                       child: Column(
                         children: [
@@ -171,6 +171,7 @@ class HomePage extends StatelessWidget {
                           SizedBox(
 
                             height: 300,
+                            width: 900,
                             child: Container(
                               child: GridView(
 
@@ -181,56 +182,38 @@ class HomePage extends StatelessWidget {
                                 children: [
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
-                                    child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
-                                    child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
-                                    child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.all(5),
-                                    height: 100,
-                                    width: 100,
+                                    height: 250,
+                                    width: 250,
                                     child:  Image.network('https://images.pexels.com/photos/1205022/pexels-photo-1205022.jpeg?auto=compress&cs=tinysrgb&w=400'),
                                   ),
 
