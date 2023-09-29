@@ -44,7 +44,7 @@ class portraitList extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           padding: EdgeInsets.all(30),
-          child: Image.network('https://images.pexels.com/photos/19671/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600',width: 150,height: 150,),
+          child: Image.network('https://images.pexels.com/photos/18395089/pexels-photo-18395089/free-photo-of-boy-in-sweater-posing-on-armchair-with-camera-in-hands.jpeg?auto=compress&cs=tinysrgb&w=600',width: 150,height: 150,),
         );
       },
     );
@@ -64,8 +64,8 @@ class landscapeGrid extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
 
-          padding: EdgeInsets.only(top: 8,bottom: 8),
-          child: Image.network('https://images.pexels.com/photos/1787234/pexels-photo-1787234.jpeg?auto=compress&cs=tinysrgb&w=600',width: 150,height: 150,),
+          padding: EdgeInsets.all(30),
+          child: Image.network('https://images.pexels.com/photos/18395089/pexels-photo-18395089/free-photo-of-boy-in-sweater-posing-on-armchair-with-camera-in-hands.jpeg?auto=compress&cs=tinysrgb&w=600',width: 150,height: 150,),
         );
       },
     );
