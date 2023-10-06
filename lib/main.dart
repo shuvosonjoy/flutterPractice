@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Size Selector'),
+        centerTitle: true,
       ),
       body: Container(
         child: Column(
@@ -71,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(0),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 0 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 0 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -82,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(1),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 1 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 1 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -93,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(2),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 2 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 2 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -104,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(3),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 3 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 3 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -115,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(4),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 4 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 4 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -126,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => changeButtonColor(5),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        selectedButtonIndex == 5 ? Colors.green : Colors.grey,
+                    selectedButtonIndex == 5 ? Colors.green : Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
