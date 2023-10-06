@@ -65,73 +65,92 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
+            Wrap(
+            //  alignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(0),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 0 ? Colors.green : Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("S"),
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(1),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 1 ? Colors.green : Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("M"),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(0),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 0 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+
+                      child: Text("S"),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(2),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 2 ? Colors.green : Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("L"),
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(3),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 3 ? Colors.green : Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("XL"),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(1),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 1 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("M"),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(4),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 4 ? Colors.green : Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("XXL"),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(2),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 2 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("L"),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () => changeButtonColor(5),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                    selectedButtonIndex == 5 ? Colors.green : Colors.grey,
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(3),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 3 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("XL"),
+                    ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text("XXXL"),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(4),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 4 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("XXL"),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: ElevatedButton(
+                    onPressed: () => changeButtonColor(5),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                      selectedButtonIndex == 5 ? Colors.green : Colors.grey,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("XXXL"),
+                    ),
                   ),
                 ),
               ],
