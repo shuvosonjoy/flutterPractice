@@ -62,7 +62,7 @@ class _ProductListPageState extends State<ProductListPage> {
         builder: (context, orientation) {
           if (orientation == Orientation.portrait) {
             return Container(
-              margin: EdgeInsets.all(15),
+              margin: EdgeInsets.only(left: 15,right: 15,top: 5,bottom: 5),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +70,7 @@ class _ProductListPageState extends State<ProductListPage> {
                   Expanded(flex: 7, child: Column(
                     children: [
                       Text("My Bag",style: TextStyle(
-                        fontWeight: FontWeight.bold,fontSize: 30,
+                        fontWeight: FontWeight.bold,fontSize: 20,
                       ),),
                       SizedBox(height: 5,),
                     ],
@@ -180,17 +180,17 @@ class _ProductListPageState extends State<ProductListPage> {
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.white,
                                               shape: CircleBorder(),
-                                              // Makes the button circular
+
                                               padding: EdgeInsets.all(10.0),
-                                              // Adjust the padding as needed
+
                                               elevation:
-                                              6, // Set the elevation for the button
+                                              6,
                                             ),
                                             child: Icon(
                                               Icons.add,
                                               size: 25.0,
                                               color: Colors
-                                                  .grey, // Adjust the icon size as needed
+                                                  .grey,
                                             ),
                                           ),
 
@@ -288,17 +288,17 @@ class _ProductListPageState extends State<ProductListPage> {
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.white,
                                               shape: CircleBorder(),
-                                              // Makes the button circular
+
                                               padding: EdgeInsets.all(10.0),
-                                              // Adjust the padding as needed
+
                                               elevation:
-                                              6, // Set the elevation for the button
+                                              6,
                                             ),
                                             child: Icon(
                                               Icons.remove,
                                               size: 25.0,
                                               color: Colors
-                                                  .grey, // Adjust the icon size as needed
+                                                  .grey,
                                             ),
                                           ),
                                           Text(
@@ -314,17 +314,17 @@ class _ProductListPageState extends State<ProductListPage> {
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Colors.white,
                                               shape: CircleBorder(),
-                                              // Makes the button circular
+
                                               padding: EdgeInsets.all(10.0),
-                                              // Adjust the padding as needed
+
                                               elevation:
-                                              6, // Set the elevation for the button
+                                              6,
                                             ),
                                             child: Icon(
                                               Icons.add,
                                               size: 25.0,
                                               color: Colors
-                                                  .grey, // Adjust the icon size as needed
+                                                  .grey,
                                             ),
                                           ),
 
@@ -663,7 +663,7 @@ class _ProductListPageState extends State<ProductListPage> {
                                 borderRadius: BorderRadius.circular(30),
                               ),
                               backgroundColor: Colors.red,
-                              padding: EdgeInsets.all(25),
+                              padding: EdgeInsets.all(15),
                             ),
                             child: Text(
                               'CHECK OUT',
