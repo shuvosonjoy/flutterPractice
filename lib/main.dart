@@ -17,12 +17,12 @@ class ItemListScreen extends StatefulWidget {
 }
 
 class _ItemListScreenState extends State<ItemListScreen> {
-  List<ItemModel> items = [
-    ItemModel(1, false),
-    ItemModel(2, false),
-    ItemModel(3, false),
-    ItemModel(4, false),
-    ItemModel(5, false),
+  List<item_list> items = [
+    item_list(1, false),
+    item_list(2, false),
+    item_list(3, false),
+    item_list(4, false),
+    item_list(5, false),
   ];
 
   int selectedCount = 0;
@@ -94,9 +94,9 @@ class _ItemListScreenState extends State<ItemListScreen> {
   }
 }
 
-class ItemModel {
+class item_list {
   final int id;
   bool isSelected;
 
-  ItemModel(this.id, this.isSelected);
+  item_list(this.id, this.isSelected);
 }
