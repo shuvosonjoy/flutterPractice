@@ -17,37 +17,56 @@ class ItemListScreen extends StatefulWidget {
 }
 
 class _ItemListScreenState extends State<ItemListScreen> {
-  List<ItemModel> items = List.generate(5, (index) => ItemModel(index, false));
+  List<ItemModel> items = [
+    ItemModel(1, false),
+    ItemModel(2, false),
+    ItemModel(3, false),
+    ItemModel(4, false),
+    ItemModel(5, false),
+  ];
 
   int selectedCount = 0;
 
   void updateSelectedCount() {
-    int count = items.where((item) => item.isSelected).length;
+    int count = 0;
+    for (var counts in items) {
+      if (counts.isSelected) {
+        count++;
+      }
+    }
     setState(() {
       selectedCount = count;
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Selectable List'),
+        title: Text('Selection Screen'),
       ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('Item ${items[index].id}'),
-            tileColor: items[index].isSelected ? Colors.blue : null,
-            onTap: () {
-              setState(() {
-                items[index].isSelected = !items[index].isSelected;
-                updateSelectedCount();
-              });
-            },
-          );
-        },
+      body: Container(
+        margin: EdgeInsets.all(15),
+        child: ListView.builder(
+          itemCount: items.length,
+
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text('Item ${items[index].id}'),
+              tileColor: items[index].isSelected ? Colors.blue : Colors.white,
+              onTap: () {
+                setState(() {
+                  items[index].isSelected = !items[index].isSelected;
+                  updateSelectedCount();
+                });
+              },
+            );
+          },
+          // separatorBuilder: (context, index) {
+          //   return Divider();
+          // },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -59,7 +78,7 @@ class _ItemListScreenState extends State<ItemListScreen> {
                 content: Text('Number of selected items: $selectedCount'),
                 actions: <Widget>[
                   TextButton(
-                    child: Text('OK'),
+                    child: Text('Close'),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
