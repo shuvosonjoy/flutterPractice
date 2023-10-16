@@ -43,8 +43,9 @@ class _TodoListState extends State<TodoList> {
         ],
         backgroundColor: Colors.white,
       ),
+
       body: Column(
-        children: <Widget>[
+        children: [
           Expanded(
             flex: 40,
             child: Padding(
