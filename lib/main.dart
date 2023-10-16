@@ -173,12 +173,14 @@ class _TodoListState extends State<TodoList> {
       builder: (context) {
         return SingleChildScrollView(
           child: Container(
+            height: 500,
             padding: EdgeInsets.only(
               bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
+              children: [
+                SizedBox(height: 50,),
                 Container(
                   margin: EdgeInsets.all(5),
                   child: TextField(
