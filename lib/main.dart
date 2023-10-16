@@ -35,9 +35,13 @@ class _TodoListState extends State<TodoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [Icon(Icons.search,color: Colors.black,)],
+        actions: [
+          Icon(
+            Icons.search,
+            color: Colors.black,
+          )
+        ],
         backgroundColor: Colors.white,
-
       ),
       body: Column(
         children: <Widget>[
@@ -122,41 +126,42 @@ class _TodoListState extends State<TodoList> {
         return AlertDialog(
           title: Text('Edit or Delete'),
           actions: <Widget>[
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  crossAxisAlignment: CrossAxisAlignment.center,
-        children:[
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-              ),
-              onPressed: () {
-                Navigator.of(context).pop();
-                _showEditBottomModalSheet(context, item, index);
-              },
-              child: Text('Edit'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-              ),
-              onPressed: () {
-                setState(() {
-                  todos.removeAt(index);
-                });
-                Navigator.of(context).pop();
-              },
-              child: Text('Delete'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    _showEditBottomModalSheet(context, item, index);
+                  },
+                  child: Text('Edit'),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      todos.removeAt(index);
+                    });
+                    Navigator.of(context).pop();
+                  },
+                  child: Text('Delete'),
+                ),
+              ],
             ),
           ],
-        ),
-        ],
         );
       },
     );
   }
 
-  void _showEditBottomModalSheet(BuildContext context, TodoItem item, int index) {
+  void _showEditBottomModalSheet(
+      BuildContext context, TodoItem item, int index) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
