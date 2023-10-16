@@ -163,10 +163,9 @@ class _TodoListState extends State<TodoList> {
       },
     );
   }
-
   void _showEditBottomModalSheet(BuildContext context, TodoItem item, int index) {
-    TextEditingController editTitleController = TextEditingController(text: item.title);
-    TextEditingController editDescriptionController = TextEditingController(text: item.description);
+    String editTitle = item.title;
+    String editDescription = item.description;
 
     showModalBottomSheet(
       context: context,
@@ -174,19 +173,19 @@ class _TodoListState extends State<TodoList> {
       builder: (context) {
         return SingleChildScrollView(
           child: Container(
-            height: 500,
             padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom),
+              bottom: MediaQuery.of(context).viewInsets.bottom,
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                SizedBox(
-                  height: 30,
-                ),
                 Container(
                   margin: EdgeInsets.all(5),
                   child: TextField(
-                    controller: editTitleController,
+                    controller: TextEditingController(text: item.title),
+                    onChanged: (text) {
+                      editTitle = text;
+                    },
                     decoration: const InputDecoration(
                       labelText: 'Edit title',
                       enabledBorder: OutlineInputBorder(),
@@ -197,7 +196,10 @@ class _TodoListState extends State<TodoList> {
                 Container(
                   margin: EdgeInsets.all(5),
                   child: TextField(
-                    controller: editDescriptionController,
+                    controller: TextEditingController(text: item.description),
+                    onChanged: (text) {
+                      editDescription = text;
+                    },
                     decoration: const InputDecoration(
                       labelText: 'Edit description',
                       enabledBorder: OutlineInputBorder(),
@@ -211,8 +213,8 @@ class _TodoListState extends State<TodoList> {
                   ),
                   onPressed: () {
                     setState(() {
-                      todos[index].title = editTitleController.text;
-                      todos[index].description = editDescriptionController.text;
+                      todos[index].title = editTitle;
+                      todos[index].description = editDescription;
                     });
                     Navigator.of(context).pop();
                   },
@@ -225,5 +227,7 @@ class _TodoListState extends State<TodoList> {
       },
     );
   }
+
+
 
 }
