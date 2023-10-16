@@ -47,9 +47,10 @@ class _TodoListState extends State<TodoList> {
       body: Column(
         children: [
           Expanded(
-            flex: 40,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
+            flex: 50,
+            child: Container(
+             // padding: const EdgeInsets.all(16.0),
+              margin: EdgeInsets.all(10),
               child: Column(
                 children: [
                   Container(
@@ -96,7 +97,7 @@ class _TodoListState extends State<TodoList> {
             ),
           ),
           Expanded(
-            flex: 60,
+            flex: 50,
             child: ListView.builder(
               itemCount: todos.length,
               itemBuilder: (context, index) {
