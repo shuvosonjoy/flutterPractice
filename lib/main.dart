@@ -32,7 +32,7 @@ class Weather {
 }
 
 class MyApp extends StatelessWidget {
-  final List<Weather> weatherData = [
+  final List<Weather> weatherInfo = [
     Weather(
       city: "New York",
       temperature: 20,
@@ -75,23 +75,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Weather Information'),
+          title: Text('Weather Info App'),
         ),
         body: ListView.builder(
-          itemCount: weatherData.length,
+          itemCount: weatherInfo.length,
           itemBuilder: (context, index) {
-            Weather weather = weatherData[index];
+            Weather weather = weatherInfo[index];
             return Card(
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(18),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  children: [
                     Text('City: ${weather.city}'),
                     Text('Temperature: ${weather.temperature}°C'),
                     Text('Condition: ${weather.condition}'),
                     Text('Humidity: ${weather.humidity}%'),
-                    Text('Wind Speed: ${weather.windSpeed} m/s'),
+                    Text('Wind Speed: ${weather.windSpeed} km/h'),
                   ],
                 ),
               ),
