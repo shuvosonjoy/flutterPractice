@@ -1,10 +1,37 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-void main(){
-  runApp(WeatherScreen());
+
+void main() {
+  runApp(MyApp());
 }
 
+class Weather {
+  final String city;
+  final int temperature;
+  final String condition;
+  final int humidity;
+  final double windSpeed;
 
-class WeatherScreen extends StatelessWidget {
+  Weather({
+    required this.city,
+    required this.temperature,
+    required this.condition,
+    required this.humidity,
+    required this.windSpeed,
+  });
+
+  factory Weather.fromJson(Map<String, dynamic> json) {
+    return Weather(
+      city: json['city'],
+      temperature: json['temperature'],
+      condition: json['condition'],
+      humidity: json['humidity'],
+      windSpeed: json['windSpeed'].toDouble(),
+    );
+  }
+}
+
+class MyApp extends StatelessWidget {
   final List<Weather> weatherData = [
     Weather(
       city: "New York",
@@ -53,17 +80,18 @@ class WeatherScreen extends StatelessWidget {
         body: ListView.builder(
           itemCount: weatherData.length,
           itemBuilder: (context, index) {
+            Weather weather = weatherData[index];
             return Card(
-
-              child: ListTile(
-                title: Text('City: ${weatherData[index].city}'),
-                subtitle: Column(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Temperature: ${weatherData[index].temperature}°C'),
-                    Text('Condition: ${weatherData[index].condition}'),
-                    Text('Humidity: ${weatherData[index].humidity}%'),
-                    Text('Wind Speed: ${weatherData[index].windSpeed} km/h'),
+                  children: <Widget>[
+                    Text('City: ${weather.city}'),
+                    Text('Temperature: ${weather.temperature}°C'),
+                    Text('Condition: ${weather.condition}'),
+                    Text('Humidity: ${weather.humidity}%'),
+                    Text('Wind Speed: ${weather.windSpeed} m/s'),
                   ],
                 ),
               ),
@@ -73,21 +101,4 @@ class WeatherScreen extends StatelessWidget {
       ),
     );
   }
-}
-class Weather {
-  final String city;
-  final double temperature;
-  final String condition;
-  final int humidity;
-  final double windSpeed;
-
-  Weather({
-    required this.city,
-    required this.temperature,
-    required this.condition,
-    required this.humidity,
-    required this.windSpeed,
-  });
-
-
 }
