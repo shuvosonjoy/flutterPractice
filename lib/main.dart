@@ -12,13 +12,6 @@ class Weather {
   final int humidity;
   final double windSpeed;
 
-  Weather({
-    required this.city,
-    required this.temperature,
-    required this.condition,
-    required this.humidity,
-    required this.windSpeed,
-  });
 
   factory Weather.fromJson(Map<String, dynamic> json) {
     return Weather(
@@ -29,6 +22,16 @@ class Weather {
       windSpeed: json['windSpeed'].toDouble(),
     );
   }
+
+  Weather({
+    required this.city,
+    required this.temperature,
+    required this.condition,
+    required this.humidity,
+    required this.windSpeed,
+  });
+
+
 }
 
 class MyApp extends StatelessWidget {
@@ -82,8 +85,8 @@ class MyApp extends StatelessWidget {
           itemBuilder: (context, index) {
             Weather weather = weatherInfo[index];
             return Card(
-              child: Padding(
-                padding: const EdgeInsets.all(18),
+              child: Container(
+                margin: EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
