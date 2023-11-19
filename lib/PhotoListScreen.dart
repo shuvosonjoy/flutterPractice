@@ -41,7 +41,7 @@ class _PhotoListScreenState extends State<PhotoListScreen> {
         photoList = PhotoList;
       });
     } else {
-      throw Exception('Error Loading Photos');
+      throw Exception('Error Loading  Photos');
     }
   }
 
